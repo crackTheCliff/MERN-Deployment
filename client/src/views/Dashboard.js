@@ -8,7 +8,7 @@ const Dashboard = () => {
     const [pirates, setPirates] = useState([])
 
     useEffect(() => {
-        axios.get("http://localhost:8000/pirates-api")
+        axios.get("http://localhost:8000/api/pirates-api")
         .then((res) => setPirates(res.data))
     }, [])
 

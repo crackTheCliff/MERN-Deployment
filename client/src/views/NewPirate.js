@@ -8,7 +8,7 @@ const NewPirate = () => {
     const [errors, setErrors] = useState([]);
 
     const createPirate = (pirate) => {
-        axios.post("http://localhost:8000/pirates-api", pirate)
+        axios.post("http://localhost:8000/api/pirates", pirate)
             .then((res) => { navigate(`/${res.data._id}`); })
             .catch((err) => {
                 console.log(err);

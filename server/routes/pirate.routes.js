@@ -1,9 +1,9 @@
 const PirateController = require("../controllers/pirate.controller");
 
 module.exports = function (app) {
-    app.get('/pirates-api', PirateController.findAllPirates);
-    app.post("/pirates-api", PirateController.createNewPirate);
-    app.get('/pirates-api/:id', PirateController.findPirateById);
-    app.put('/pirates-api/:id', PirateController.updatePirateById);
-    app.delete('/pirates-api/:id', PirateController.deletePirateById);
+    app.get('/api/pirates', PirateController.findAllPirates);
+    app.post("/api/pirates", PirateController.createNewPirate);
+    app.get('/api/pirates/:id', PirateController.findPirateById);
+    app.put('/api/pirates/:id', PirateController.updatePirateById);
+    app.delete('/api/pirates/:id', PirateController.deletePirateById);
 }

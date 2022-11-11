@@ -10,7 +10,7 @@ const ViewPirate = () => {
 
     useEffect(() => {
         axios
-            .get("http://localhost:8000/pirates-api/" + id)
+            .get("http://localhost:8000/api/pirates/" + id)
             .then((res) => setPirate(res.data))
             .catch((err) => navigate("/error", err));
     }, [id,navigate]);

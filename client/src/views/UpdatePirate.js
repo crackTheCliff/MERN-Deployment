@@ -12,7 +12,7 @@ const UpdatePirate = () => {
 
     useEffect(() => {
         axios
-            .get("http://localhost:8000/pirates-api/" + id)
+            .get("http://localhost:8000/api/pirates/" + id)
             .then((res) => {
                 setPirate(res.data);
                 setLoaded(true);
@@ -21,7 +21,7 @@ const UpdatePirate = () => {
     }, [id, navigate])
 
     const updatePirate = (pirate) => {
-        axios.put(`http://localhost:8000/pirates-api/${id}`, pirate)
+        axios.put(`http://localhost:8000/api/pirates/${id}`, pirate)
             .then((res) => { navigate("/"); })
             .catch((err) => {
                 const errorResponse = err.response.data.errors;

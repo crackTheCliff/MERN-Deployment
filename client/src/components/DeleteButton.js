@@ -7,7 +7,7 @@ const DeleteButton = (props) => {
 
     const deleteProduct = (e) => {
         axios
-            .delete(`http://localhost:8000/pirates-api/${pirateId}/`)
+            .delete(`http://localhost:8000/api/pirates/${pirateId}/`)
             .then((res) => {
                 successCallback();
             });
